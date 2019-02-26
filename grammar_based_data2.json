@@ -1,0 +1,336 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {"text": "Haha nice", "intent": "affirm", "entities": [] }, {"text": "Ok", "intent": "affirm", "entities": [] }, {"text": "Me too", "intent": "affirm", "entities": [] }, {"text": "Me also", "intent": "affirm", "entities": [] }, {"text": "cool", "intent": "affirm", "entities": [] }, {"text": "yeah!", "intent": "affirm", "entities": [] }, {"text": "Me too!", "intent": "affirm", "entities": [] }, {"text": "Oke", "intent": "affirm", "entities": [] }, {"text": "I love too", "intent": "affirm", "entities": [] }, {"text": "me too", "intent": "affirm", "entities": [] }, {"text": "ok", "intent": "affirm", "entities": [] }, {"text": "Yes", "intent": "affirm", "entities": [] }, {"text": "Yes, i am. i am.", "intent": "affirm", "entities": [] }, {"text": "Exactly.", "intent": "affirm", "entities": [] }, {"text": "seems nice", "intent": "affirm", "entities": [] }, {"text": "we all do yes it's true", "intent": "affirm", "entities": [] }, {"text": "Yes, it is going good", "intent": "affirm", "entities": [] }, {"text": "Cool.", "intent": "affirm", "entities": [] }, {"text": "Yes, it is, i love it.", "intent": "affirm", "entities": [] }, {"text": "For sure!", "intent": "affirm", "entities": [] }, {"text": "Yeah", "intent": "affirm", "entities": [] }, {"text": "Oh yes, it wonderful", "intent": "affirm", "entities": [] }, {"text": "Yep", "intent": "affirm", "entities": [] }, {"text": "So do I", "intent": "affirm", "entities": [] }, {"text": "I see", "intent": "affirm", "entities": [] }, {"text": "Sounds cool", "intent": "affirm", "entities": [] }, {"text": "Nice to hear that", "intent": "affirm", "entities": [] }, {"text": "That's cool", "intent": "affirm", "entities": [] }, {"text": "yes , i do . i love it .", "intent": "affirm", "entities": [] }, {"text": "Nice", "intent": "affirm", "entities": [] }, {"text": "good", "intent": "affirm", "entities": [] }, {"text": "it's good", "intent": "affirm", "entities": [] }, {"text": "Oh I see", "intent": "affirm", "entities": [] }, {"text": "yes , i have . i have to record it all the time .", "intent": "affirm", "entities": [] }, {"text": "Yes, i do, i love it", "intent": "affirm", "entities": [] }, {"text": "Nice. You are really nice guy", "intent": "affirm", "entities": [] }, {"text": "Yes, i am. i am", "intent": "affirm", "entities": [] }, {"text": "sounds cool", "intent": "affirm", "entities": [] }, {"text": "Yes, it is", "intent": "affirm", "entities": [] }, {"text": "Yes indeed", "intent": "affirm", "entities": [] }, {"text": "Yeah it is a good one", "intent": "affirm", "entities": [] }, {"text": "i see", "intent": "affirm", "entities": [] }, {"text": "That's good.", "intent": "affirm", "entities": [] }, {"text": "Yes it is", "intent": "affirm", "entities": [] }, {"text": "Yeah, sure", "intent": "affirm", "entities": [] }, {"text": "that is a very good thing to do .", "intent": "affirm", "entities": [] }, {"text": "yes , i can . i am sure you will .", "intent": "affirm", "entities": [] }, {"text": "yes i do , i have been thinking about it .", "intent": "affirm", "entities": [] }, {"text": "Cool,  i just bought a new truck", "intent": "affirm", "entities": [] }, {"text": "You are really nice guy", "intent": "affirm", "entities": [] }, {"text": "Why. You are great", "intent": "affirm", "entities": [] }, {"text": "That's so nice of you.", "intent": "affirm", "entities": [] }, {"text": "Yeah it is. i am sure it is.", "intent": "affirm", "entities": [] }, {"text": "i am sure that is a good thing to do .", "intent": "affirm", "entities": [] }, {"text": "It was good. was good.", "intent": "affirm", "entities": [] }, {"text": "Oh yeah?", "intent": "affirm", "entities": [] }, {"text": "Great.", "intent": "affirm", "entities": [] }, {"text": "Yes, it is", "intent": "affirm", "entities": [] }, {"text": "Yes, it is, i love it", "intent": "affirm", "entities": [] }, {"text": "It is good it is", "intent": "affirm", "entities": [] },
+      {"text": "Hello", "intent": "greet", "entities": [] }, {"text": "Hey", "intent": "greet", "entities": [] }, {"text": "Hi", "intent": "greet", "entities": [] }, {"text": "Неllo", "intent": "greet", "entities": [] }, {"text": "Hello, how are you?", "intent": "greet", "entities": [] }, {"text": "hello", "intent": "greet", "entities": [] }, {"text": "anybody there", "intent": "greet", "entities": [] }, {"text": "What’s up?", "intent": "greet", "entities": [] }, {"text": "Thank you how are you", "intent": "greet", "entities": [] }, {"text": "hey", "intent": "greet", "entities": [] }, {"text": "hello how are you", "intent": "greet", "entities": [] }, {"text": "Hello there!", "intent": "greet", "entities": [] }, {"text": "Hi, is anyone on other end?", "intent": "greet", "entities": [] }, {"text": "Hello!", "intent": "greet", "entities": [] }, {"text": "hi", "intent": "greet", "entities": [] }, {"text": "hi !", "intent": "greet", "entities": [] }, {"text": "hey there", "intent": "greet", "entities": [] }, {"text": "Hi there!", "intent": "greet", "entities": [] }, {"text": "Hello?", "intent": "greet", "entities": [] }, {"text": "Hello! How are you?", "intent": "greet", "entities": [] }, {"text": "Hi! Anyone there?", "intent": "greet", "entities": [] }, {"text": "Are you there?", "intent": "greet", "entities": [] }, {"text": "Yo!", "intent": "greet", "entities": [] }, {"text": "whats up!", "intent": "greet", "entities": [] }, {"text": "Well hello there!", "intent": "greet", "entities": [] }, {"text": "Are you here?", "intent": "greet", "entities": [] }, {"text": "hello there", "intent": "greet", "entities": [] }, {"text": "how's it going?", "intent": "greet", "entities": [] }, {"text": "Anybody here?", "intent": "greet", "entities": [] }, {"text": "hello young man. or girl?", "intent": "greet", "entities": [] }, {"text": "is there anybody out there?", "intent": "greet", "entities": [] }, {"text": "hi!", "intent": "greet", "entities": [] }, {"text": "Hi!", "intent": "greet", "entities": [] }, {"text": "hello!", "intent": "greet", "entities": [] }, {"text": "How are you", "intent": "greet", "entities": [] }, {"text": "Are you ok", "intent": "greet", "entities": [] }, {"text": "Do you want to talk with me", "intent": "greet", "entities": [] }, {"text": "hello bot", "intent": "greet", "entities": [] }, {"text": "hello thare", "intent": "greet", "entities": [] }, {"text": "what's up?", "intent": "greet", "entities": [] }, {"text": "Hello.", "intent": "greet", "entities": [] }, {"text": "Hey? Is anybody here?", "intent": "greet", "entities": [] }, {"text": "Hiya!", "intent": "greet", "entities": [] }, {"text": "hello how are you?", "intent": "greet", "entities": [] }, {"text": "Hello, stranger", "intent": "greet", "entities": [] }, {"text": "are you there?", "intent": "greet", "entities": [] }, {"text": "Hello there! how are you?", "intent": "greet", "entities": [] }, {"text": "Hello, what is your name?", "intent": "greet", "entities": [] }, {"text": "hey, are you here?", "intent": "greet", "entities": [] }, {"text": "hellop", "intent": "greet", "entities": [] }, {"text": "good morning", "intent": "greet", "entities": [] }, {"text": "hi there", "intent": "greet", "entities": [] }, {"text": "Hello there", "intent": "greet", "entities": [] }, {"text": "hello i just moved here from germany", "intent": "greet", "entities": [] }, {"text": "Hello! Are you here?", "intent": "greet", "entities": [] }, {"text": "Whazzup?", "intent": "greet", "entities": [] }, {"text": "Hey, come on, let me see at you!", "intent": "greet", "entities": [] }, {"text": "Hey. How are you?", "intent": "greet", "entities": [] }, {"text": "what's up?", "intent": "greet", "entities": [] }, {"text": "what's up?", "intent": "greet", "entities": [] },
+      {"text": "Not really...", "intent": "reject", "entities": [] }, {"text": "You contradicted yourself just now", "intent": "reject", "entities": [] }, {"text": "no I don't have", "intent": "reject", "entities": [] }, {"text": "I do not know what that means", "intent": "reject", "entities": [] }, {"text": "I don't", "intent": "reject", "entities": [] }, {"text": "I do not have a lot of time to.", "intent": "reject", "entities": [] }, {"text": "I do not have time for it", "intent": "reject", "entities": [] }, {"text": "I don't understand you", "intent": "reject", "entities": [] }, {"text": "I do not know.", "intent": "reject", "entities": [] }, {"text": "I don't understand", "intent": "reject", "entities": [] }, {"text": "I do not know what i want to do", "intent": "reject", "entities": [] }, {"text": "Don't do that", "intent": "reject", "entities": [] }, {"text": "I do not know what that is", "intent": "reject", "entities": [] }, {"text": "I do not know what i want to do yet", "intent": "reject", "entities": [] }, {"text": "I do not think so. i do not think i could do that.", "intent": "reject", "entities": [] }, {"text": "Okay. I don't know what that means", "intent": "reject", "entities": [] }, {"text": "I do not, do you?", "intent": "reject", "entities": [] }, {"text": "I don't know.", "intent": "reject", "entities": [] }, {"text": "You are weird", "intent": "reject", "entities": [] }, {"text": "I don't know", "intent": "reject", "entities": [] }, {"text": "I do not understand you...", "intent": "reject", "entities": [] }, {"text": "That’s weird", "intent": "reject", "entities": [] }, {"text": "No I don't", "intent": "reject", "entities": [] }, {"text": "I do not know what you mean", "intent": "reject", "entities": [] }, {"text": "I really don't get what you mean?", "intent": "reject", "entities": [] }, {"text": "No, i do not. i do not know.", "intent": "reject", "entities": [] }, {"text": "I do not know what that is.", "intent": "reject", "entities": [] }, {"text": "I do not know what that means.", "intent": "reject", "entities": [] }, {"text": "Um, i don't know.", "intent": "reject", "entities": [] }, {"text": "You don't", "intent": "reject", "entities": [] }, {"text": "I don't believe you.", "intent": "reject", "entities": [] }, {"text": "I do not know about that.", "intent": "reject", "entities": [] }, {"text": "I do not. Do you ?", "intent": "reject", "entities": [] }, {"text": "um, i don't get it", "intent": "reject", "entities": [] }, {"text": "I don't know if this is true or not.", "intent": "reject", "entities": [] }, {"text": "i do not know . i do not know .", "intent": "reject", "entities": [] }, {"text": "No, I don't", "intent": "reject", "entities": [] }, {"text": "no , i do not .", "intent": "reject", "entities": [] }, {"text": "no, I don't", "intent": "reject", "entities": [] }, {"text": "I don't understand why this is happening.", "intent": "reject", "entities": [] }, {"text": "I do not think so. But that is ok .", "intent": "reject", "entities": [] }, {"text": "No i do not think so .", "intent": "reject", "entities": [] }, {"text": "I do not, do you ?", "intent": "reject", "entities": [] }, {"text": "I don't think so.", "intent": "reject", "entities": [] }, {"text": "I do not think so, but it is okay .", "intent": "reject", "entities": [] }, {"text": "I do not think that .", "intent": "reject", "entities": [] }, {"text": "I don't know this feeling", "intent": "reject", "entities": [] }, {"text": "I do not know what you mean .", "intent": "reject", "entities": [] }, {"text": "I do not understand you", "intent": "reject", "entities": [] }, {"text": "you don't make any sense", "intent": "reject", "entities": [] }, {"text": "I don't get it.", "intent": "reject", "entities": [] }, {"text": "I don't think it is true.", "intent": "reject", "entities": [] }, {"text": "I do not know how to make it.", "intent": "reject", "entities": [] }, {"text": "I don't believe you", "intent": "reject", "entities": [] }, {"text": "I do not know what to do with it.", "intent": "reject", "entities": [] }, {"text": "I don't want to see this shit", "intent": "reject", "entities": [] }, {"text": "I don't know how", "intent": "reject", "entities": [] }, {"text": "I don't know what to say for this", "intent": "reject", "entities": [] }, {"text": "no way!", "intent": "reject", "entities": [] }, {"text": "No i don't", "intent": "reject", "entities": [] },
+      {"text": "i don't go to the gym most days", "intent": "sport", "entities": [] }, {"text": "i see , i am a black belt , so i can not say that , but i am not sure .", "intent": "sport", "entities": [] }, {"text": "i enjoy american sports", "intent": "sport", "entities": [] }, {"text": "that is cool , i am a dancer , and i am a teacher , and you ?", "intent": "sport", "entities": [] }, {"text": "i am a black belt , so i am a fan of it , but i am not sure .", "intent": "sport", "entities": [] }, {"text": "i am good . i am just getting ready to go to the gym .", "intent": "sport", "entities": [] }, {"text": "are you a sportsman?", "intent": "sport", "entities": [] }, {"text": "i am a fan of football , but i am not sure if i could say that .", "intent": "sport", "entities": [] }, {"text": "Have you been played football?", "intent": "sport", "entities": [] }, {"text": "What is your football team?", "intent": "sport", "entities": [] }, {"text": "i have a friend , and i am a fan of football", "intent": "sport", "entities": [] }, {"text": "i am a fan of football , but i am not sure if i ever seen it .", "intent": "sport", "entities": [] }, {"text": "that is cool , i am a pro football player , and i love baseball , you ?", "intent": "sport", "entities": [] }, {"text": "I am in the wrestling team", "intent": "sport", "entities": [] }, {"text": "Oh it's ok. Yesterday i was riding bike on mountains", "intent": "sport", "entities": [] }, {"text": "Taco, Matthew Berry, the ESPN Fantasy Football expert.", "intent": "sport", "entities": [] }, {"text": "i have no idea . i am more of a gym gal .", "intent": "sport", "entities": [] }, {"text": "I drive to gym some days", "intent": "sport", "entities": [] }, {"text": "How many times a week do you go to the gym?", "intent": "sport", "entities": [] }, {"text": "i am not into that sport . i am more of a quiet guy .", "intent": "sport", "entities": [] }, {"text": "Do you exercise?", "intent": "sport", "entities": [] }, {"text": "Sports?", "intent": "sport", "entities": [] }, {"text": "i am not really into sports . i am more of a homebody .", "intent": "sport", "entities": [] }, {"text": "american football?", "intent": "sport", "entities": [] }, {"text": "Have you ever been to gym?", "intent": "sport", "entities": [] }, {"text": "i think so , i have to go to the gym to look at it .", "intent": "sport", "entities": [] }, {"text": "Football sounds nice. Do you watch World Cup?", "intent": "sport", "entities": [] }, {"text": "What about other sports?", "intent": "sport", "entities": [] }, {"text": "Okay. Do you exercise often?", "intent": "sport", "entities": [] }, {"text": "What's your favorite football team?", "intent": "sport", "entities": [] }, {"text": "i am not into sports . i am more of a homebody .", "intent": "sport", "entities": [] }, {"text": "The Kippman Group, who so believes in you as a gymnast,", "intent": "sport", "entities": [] }, {"text": "are you interested in gymnastic", "intent": "sport", "entities": [] }, {"text": "so are you interested in sports?", "intent": "sport", "entities": [] }, {"text": "i wear motorbike helmet all the time", "intent": "sport", "entities": [] }, {"text": "i don't even own a bike", "intent": "sport", "entities": [] }, {"text": "i was just kidding i own a bike", "intent": "sport", "entities": [] }, {"text": "Ooh! Can I have this little football?", "intent": "sport", "entities": [] }, {"text": "The Alfa 4C is better than the quad bike.", "intent": "sport", "entities": [] }, {"text": "The BMW S1000RR, the world's most powerful road bike.", "intent": "sport", "entities": [] }, {"text": "Don't you like swimming?", "intent": "sport", "entities": [] }, {"text": "Football?", "intent": "sport", "entities": [] }, {"text": "I’m a professional tennis player", "intent": "sport", "entities": [] }, {"text": "I love to ride my bike", "intent": "sport", "entities": [] }, {"text": "What sports?", "intent": "sport", "entities": [] }, {"text": "I’m a football player", "intent": "sport", "entities": [] }, {"text": "I like to play football", "intent": "sport", "entities": [] }, {"text": "Football fan?", "intent": "sport", "entities": [] }, {"text": "I like football, but i like football", "intent": "sport", "entities": [] }, {"text": "Basketball", "intent": "sport", "entities": [] }, {"text": "I play basketball for the team", "intent": "sport", "entities": [] }, {"text": "I am a bit of a yoga instructor.", "intent": "sport", "entities": [] }, {"text": "Do you do sport?", "intent": "sport", "entities": [] }, {"text": "I am a tennis player. i play tennis professionally.", "intent": "sport", "entities": [] }, {"text": "I play tennis and play tennis.", "intent": "sport", "entities": [] }, {"text": "i go to the gym regularly", "intent": "sport", "entities": [] }, {"text": "yoga is great", "intent": "sport", "entities": [] }, {"text": "Running is awesome but gymnastics is better ", "intent": "sport", "entities": [] }, {"text": "i too did gymnastics but my passion is with running", "intent": "sport", "entities": [] }, {"text": "I like rock climbing and hiking", "intent": "sport", "entities": [] },
+      {
+        "text": "no",
+        "intent": "reject",
+        "entities": []
+      },      
+      {
+        "text": "not really",
+        "intent": "reject",
+        "entities": []
+      },
+      {
+        "text": "oh not really",
+        "intent": "reject",
+        "entities": []
+      },
+      {
+        "text": "i don't",
+        "intent": "reject",
+        "entities": []
+      },
+      {
+        "text": "i can't",
+        "intent": "reject",
+        "entities": []
+      },
+      {
+        "text": "i'm not",
+        "intent": "reject",
+        "entities": []
+      },
+      {
+        "text": "it does not help",
+        "intent": "reject",
+        "entities": []
+      },
+      {
+        "text": "it doesn't help",
+        "intent": "reject",
+        "entities": []
+      },
+      {
+        "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "howdy",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hey there",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "i'm looking for a place to stay the night",
+        "intent": "hotel_search",
+        "entities": []
+      },
+      {
+        "text": "i'm looking for a place in the north of town",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 36,
+            "value": "north",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "show me cheap hotels",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "cheap",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "yes",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yep",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yeah",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "can you find me hotel in the south?",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 29,
+            "end": 34,
+            "value": "south",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "goodbye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "good bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "stop",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "end",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "i am looking for a place in the center",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 32,
+            "end": 38,
+            "value": "center",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "search for hotels",
+        "intent": "hotel_search",
+        "entities": []
+      },
+      {
+        "text": "maybe something in the west?",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "west",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "city center hotel might be better",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "center",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "what's up?",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "show me expensive hotels",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 17,
+            "value": "expensive",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "is there a more expensive hotel",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 16,
+            "end": 25,
+            "value": "expensive",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "maybe something in the west?",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "west",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "maybe a cheap hotel?",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "cheap",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "maybe something in the north?",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 28,
+            "value": "north",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "show me a cheap hotel in the south",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 15,
+            "value": "cheap",
+            "entity": "price"
+          },
+          {
+            "start": 29,
+            "end": 34,
+            "value": "south",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "i am looking for a hotel in the center",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 32,
+            "end": 38,
+            "value": "center",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "can you describe where to use present simple tense?",
+         "intent": "grammar", 
+         "entities": [ 
+          { 
+          "start": 30,
+           "end": 44, 
+          "value": "present simple", 
+        "entity": "tense" 
+      }, 
+      { 
+      "start": 8, 
+      "end": 16, 
+      "value": "describe", 
+      "entity": "function" }, 
+      { 
+      "start": 23,
+       "end": 29, 
+     "value": "to use", 
+      "entity": "function" 
+      } 
+      ] 
+       }, 
+       {"text": "can you describe where to use past simple tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 41, "value": "past simple", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe where to use future simple tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 43, "value": "future simple", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe where to use present perfect tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 45, "value": "present perfect", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe where to use past perfect tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 42, "value": "past perfect", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe where to use future perfect tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 44, "value": "future perfect", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe where to use present continuous tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 48, "value": "present continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe where to use past continuous tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 45, "value": "past continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe where to use future continuous tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 47, "value": "future continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe where to use present perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 56, "value": "present perfect continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe where to use past perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 53, "value": "past perfect continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe where to use future perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 30, "end": 55, "value": "future perfect continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 23, "end": 29, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use simple present tense?", "intent": "grammar", "entities": [ { "start": -1, "end": 13, "value": "present simple", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use simple past tense?", "intent": "grammar", "entities": [ { "start": -1, "end": 10, "value": "past simple", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use simple future tense?", "intent": "grammar", "entities": [ { "start": -1, "end": 12, "value": "future simple", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use present perfect tense?", "intent": "grammar", "entities": [ { "start": 29, "end": 44, "value": "present perfect", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use past perfect tense?", "intent": "grammar", "entities": [ { "start": 29, "end": 41, "value": "past perfect", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use future perfect tense?", "intent": "grammar", "entities": [ { "start": 29, "end": 43, "value": "future perfect", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use present continuous tense?", "intent": "grammar", "entities": [ { "start": 29, "end": 47, "value": "present continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use past continuous tense?", "intent": "grammar", "entities": [ { "start": 29, "end": 44, "value": "past continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use future continuous tense?", "intent": "grammar", "entities": [ { "start": 29, "end": 46, "value": "future continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use present perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 29, "end": 55, "value": "present perfect continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use past perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 29, "end": 52, "value": "past perfect continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "can you describe when to use future perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 29, "end": 54, "value": "future perfect continuous", "entity": "tense" }, { "start": 8, "end": 16, "value": "describe", "entity": "function" }, { "start": 22, "end": 28, "value": "to use", "entity": "function" } ] }, {"text": "how to use present simple tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 25, "value": "present simple", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use past simple tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 22, "value": "past simple", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use future simple tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 24, "value": "future simple", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use present perfect tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 26, "value": "present perfect", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use past perfect tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 23, "value": "past perfect", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use future perfect tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 25, "value": "future perfect", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use present continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 29, "value": "present continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use past continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 26, "value": "past continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use future continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 28, "value": "future continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use present perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 37, "value": "present perfect continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use past perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 34, "value": "past perfect continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use future perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 36, "value": "future perfect continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use simple present tense?", "intent": "grammar", "entities": [ { "start": -1, "end": 13, "value": "present simple", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use simple past tense?", "intent": "grammar", "entities": [ { "start": -1, "end": 10, "value": "past simple", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use simple future tense?", "intent": "grammar", "entities": [ { "start": -1, "end": 12, "value": "future simple", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use present perfect tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 26, "value": "present perfect", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use past perfect tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 23, "value": "past perfect", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use future perfect tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 25, "value": "future perfect", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use present continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 29, "value": "present continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use past continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 26, "value": "past continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use future continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 28, "value": "future continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use present perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 37, "value": "present perfect continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use past perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 34, "value": "past perfect continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "how to use future perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 11, "end": 36, "value": "future perfect continuous", "entity": "tense" }, { "start": 4, "end": 10, "value": "to use", "entity": "function" } ] }, {"text": "can you give me an example sentence in present simple tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 53, "value": "present simple", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in past simple tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 50, "value": "past simple", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in future simple tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 52, "value": "future simple", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in present perfect tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 54, "value": "present perfect", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in past perfect tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 51, "value": "past perfect", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in future perfect tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 53, "value": "future perfect", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in present continuous tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 57, "value": "present continuous", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in past continuous tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 54, "value": "past continuous", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in future continuous tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 56, "value": "future continuous", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in present perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 65, "value": "present perfect continuous", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in past perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 62, "value": "past perfect continuous", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you give me an example sentence in future perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 39, "end": 64, "value": "future perfect continuous", "entity": "tense" }, { "start": 19, "end": 26, "value": "example", "entity": "function" } ] }, {"text": "can you exemplify simple present tense?", "intent": "grammar", "entities": [ { "start": -1, "end": 13, "value": "present simple", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify simple past tense?", "intent": "grammar", "entities": [ { "start": -1, "end": 10, "value": "past simple", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify simple future tense?", "intent": "grammar", "entities": [ { "start": -1, "end": 12, "value": "future simple", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify present perfect tense?", "intent": "grammar", "entities": [ { "start": 18, "end": 33, "value": "present perfect", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify past perfect tense?", "intent": "grammar", "entities": [ { "start": 18, "end": 30, "value": "past perfect", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify future perfect tense?", "intent": "grammar", "entities": [ { "start": 18, "end": 32, "value": "future perfect", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify present continuous tense?", "intent": "grammar", "entities": [ { "start": 18, "end": 36, "value": "present continuous", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify past continuous tense?", "intent": "grammar", "entities": [ { "start": 18, "end": 33, "value": "past continuous", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify future continuous tense?", "intent": "grammar", "entities": [ { "start": 18, "end": 35, "value": "future continuous", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify present perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 18, "end": 44, "value": "present perfect continuous", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify past perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 18, "end": 41, "value": "past perfect continuous", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }, {"text": "can you exemplify future perfect continuous tense?", "intent": "grammar", "entities": [ { "start": 18, "end": 43, "value": "future perfect continuous", "entity": "tense" }, { "start": 8, "end": 17, "value": "exemplify", "entity": "function" } ] }
+    ]
+  }
+}
