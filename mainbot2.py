@@ -69,7 +69,7 @@ def respond(user_message):
 
 
 # Env Tokens
-os.environ['SLACK_TOKEN'] = 'xoxb-528323970259-528632397605-E2epyvLf2WxtI5oRMtxqWdOH'
+os.environ['SLACK_TOKEN'] = 'xoxb-528323970259-528632397605-6dZUopuUBG0DAhR3atphsdzM'
 os.environ['BOTNAME'] = 'bot'
 def handle_command(slack_api, command, channel):
 	"""

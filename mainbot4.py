@@ -10,6 +10,11 @@ import os
 
 # Import sqlite3
 import sqlite3
+from grammar_response import res_grammar
+
+# Env Tokens
+os.environ['BOTNAME'] = 'bot'
+
 
 # Rasa NLU codes
 from rasa_nlu.training_data import load_data
@@ -29,6 +34,7 @@ response_dict = {"greet" : ["hi back", "what's up"], "goodbye" : ["goodbye :(", 
                  "rest": ["can we talk about something else? i'd like to help you on grammar issues", \
                           "what do you mean exactly?", \
                           "we'd better talk about grammar. i don't want to talk about {}-related issues today"], \
+                 "grammar_check":["You probably meant", "you mean", "All right, i understood", "May be you could have said"],
                 "affirm" : ["Great, hit me up with other questions", "Good to be on the same page!"],\
                 "reject" : ["Sorry that I am not helpful. Could you ask me anything else?", \
                             "Maybe other grammar related questions i can relate!"]}
@@ -36,9 +42,6 @@ database_dict = { "grammar" : "grammar.db" , "hotel_search" : "hotels.db", "gree
 query_dict = {"grammar" : "select data FROM grammar", "hotel_search" : "select name FROM hotels"}
 
 
-# initialize global variables
-params = {}
-stored_intent = ""
 # initialize global variables
 params = {}
 stored_intent = ""
@@ -135,9 +138,15 @@ def respond(user_message):
         global params
         params = {}
     params = find_params(user_message)
-    #print("params are", params)
-    print(generate_response(intent, params)[0])
-    return generate_response(intent, params)[0]
+    print("params are", params ,  " Intent : " , intent )
+    
+    response_grammar = res_grammar(user_message, response_dict )
+    response_general = generate_response(intent, params)[0]
+    
+    response = response_grammar + response_general
+    
+    #print(generate_response(intent, params)[0])
+    return response
 
 # Env Tokens
 
@@ -151,15 +160,10 @@ def handle_command(slack_api, command, channel):
 	EXAMPLE_COMMAND = 'do'
 	
 	parsed = interpreter.parse(command)
-	print(parsed)
-	
-	#if command.lower().startswith(EXAMPLE_COMMAND) or command.lower().startswith('what'):
-
-	#	slack_api.rtm_send_message(channel, 'Yes, code me further to do that!')
-	#elif command.lower().startswith('hi') or command.lower().startswith('hey') or command.lower().startswith('hello') or command.lower().startswith('who are you'):
-	#	slack_api.rtm_send_message(channel, 'Hey, I\'m your slack bot, how may I help you?')
-	if len(respond(command.lower())) is not 0:
-		slack_api.rtm_send_message(channel, respond(command.lower()))
+	response_generated = respond(command.lower())
+    
+	if len(response_generated) is not 0:
+		slack_api.rtm_send_message(channel, response_generated)
 	else:
 		print ('Invalid Command: Not Understood')
 		slack_api.rtm_send_message(channel, 'Invalid Command: Not Understood')
