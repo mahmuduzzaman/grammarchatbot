@@ -12,13 +12,11 @@ import os
 import sqlite3
 from grammar_response import res_grammar
 
-# Env Tokens
-os.environ['BOTNAME'] = 'bot'
 
 
 # Rasa NLU codes
 from rasa_nlu.training_data import load_data
-training_data = load_data("grammar_based_data2.json") 
+training_data = load_data("grammar_based_data4.json") 
 from rasa_nlu.config import RasaNLUModelConfig
 from rasa_nlu.model import Trainer 
 config = RasaNLUModelConfig(configuration_values= {'pipeline': 'spacy_sklearn'}) 
@@ -26,25 +24,28 @@ trainer = Trainer(config)
 interpreter = trainer.train(training_data)
 
 # create dictionaries and lists for later use
-intents_list = ["greet", "goodbye", "hotel_search", "grammar", "affirm", "rest", "reject"] # add 'rest' to this list
+intents_list = ["greet", "goodbye", "hotel_search", "grammar", "affirm", "rest", "reject"]
 response_dict = {"greet" : ["hi back", "what's up"], "goodbye" : ["goodbye :(", "hope to see you again soon"],\
                 "hotel_search" : ["No such hotel, sorry :(", "{} seems to be a good option", "what about {}?"],\
-                 "grammar": ["unfortunately this is too advanced for me :(", "here you can find some information: {}", \
+                "grammar": ["unfortunately this is too advanced for me :(", "here you can find some information: {}", \
                              "here you can find some examples: {}"], \
-                 "rest": ["can we talk about something else? i'd like to help you on grammar issues", \
+                "rest": ["can we talk about something else? i'd like to help you on grammar issues", \
                           "what do you mean exactly?", \
                           "we'd better talk about grammar. i don't want to talk about {}-related issues today"], \
-                 "grammar_check":["You probably meant", "you mean", "All right, i understood", "May be you could have said"],
+                "grammar_check":["You probably meant", "you mean", "All right, i understood", "May be you could have said"],
                 "affirm" : ["Great, hit me up with other questions", "Good to be on the same page!"],\
                 "reject" : ["Sorry that I am not helpful. Could you ask me anything else?", \
                             "Maybe other grammar related questions i can relate!"]}
-database_dict = { "grammar" : "grammar.db" , "hotel_search" : "hotels.db", "greet" : None, "goodbye" : None, "rest" : None, }
-query_dict = {"grammar" : "select data FROM grammar", "hotel_search" : "select name FROM hotels"}
+database_dict = { "grammar" : "grammar_final.db" , "hotel_search" : "hotels.db", "greet" : None, "goodbye" : None, "rest" : None, }
+query_dict = {"grammar" : "select text FROM grammar", "hotel_search" : "select name FROM hotels"}
 
+description_list = ["definition", "define", "what is", "use", "describe", "rules", "form", "to use"]
+example_list = ["examples", "exemplify", "sentence with"]
 
 # initialize global variables
 params = {}
 stored_intent = ""
+
 
 
 # given a grammatically corrected user input message, find it's intent
@@ -66,6 +67,7 @@ def find_query(params, intent):
     if len(params) > 0:
         filters = ["{}=?".format(k) for k in params]
         query += " WHERE " + " and ".join(filters)
+    #print(query)
     # Create the tuple of values
     t = tuple(params.values())
     # Connect to DB
@@ -93,10 +95,13 @@ def generate_response(intent, params):
             return "i'm sorry, i can't find anything", params
     elif intent == "grammar":        
         # correct entity values to match database
-        if "to use" in params.values():
-            params["function"] = "describe"
-        elif "exemplify" in params.values():
-            params["function"] = "example"
+        for item in description_list:
+            if item in params.values():
+                params["function"] = "description"
+        for item in example_list:
+            if item in params.values():
+                params["function"] = "example"
+
         result_candidates = find_query(params, intent)
         
         # add a minor random element to perk up the responses!
@@ -109,16 +114,19 @@ def generate_response(intent, params):
             random_ending = ""
             
         if len(result_candidates) > 0:
-            names = [r[0] for r in result_candidates]
-            random_index = randrange(len(names))
-            given_name = names[random_index]
+            #names = [r[0] for r in result_candidates]
+            #print("result cand", result_candidates)
+            #print("names" , names)
+            #random_index = randrange(len(names))
+            #given_name = names[random_index]
             n = min(len(result_candidates),len(response_dict[intent])-1)
-            if "describe" in params.values(): 
-                return response_dict[intent][1].format(given_name)+random_ending, params
+            if "description" in params.values(): 
+                return response_dict[intent][1].format(result_candidates[0][0])+random_ending, params
             elif "example" in params.values():
-                return response_dict[intent][2].format(given_name)+random_ending, params
+                return response_dict[intent][2].format(result_candidates[0][0])+random_ending, params
             else: # in case only the name of the grammar subject but not the function is captured, provide definition
-                return response_dict[intent][1].format(given_name)+random_ending, params
+                
+                return response_dict[intent][1].format(result_candidates[0][0], result_candidates[1][0])+random_ending, params
         else:
             return response_dict[intent][0], params
     elif intent not in intents_list:
@@ -151,6 +159,7 @@ def respond(user_message):
 # Env Tokens
 
 os.environ['BOTNAME'] = 'bot'
+
 def handle_command(slack_api, command, channel):
 	"""
 	Recieves commands directed for the bot, if they are valid perform action 
