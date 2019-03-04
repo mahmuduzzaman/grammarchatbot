@@ -12,8 +12,6 @@ import os
 import sqlite3
 from grammar_response import res_grammar
 
-
-
 # Rasa NLU codes
 from rasa_nlu.training_data import load_data
 training_data = load_data("grammar_based_data4.json") 
@@ -45,8 +43,6 @@ example_list = ["examples", "exemplify", "sentence with"]
 # initialize global variables
 params = {}
 stored_intent = ""
-
-
 
 # given a grammatically corrected user input message, find it's intent
 def intent_classifier(user_message):
