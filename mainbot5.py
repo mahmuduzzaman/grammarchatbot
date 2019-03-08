@@ -170,11 +170,34 @@ def intent_classifier(user_message):
 
 
 # fill in the dictionary of entity names and corresponding values for a given user message
+from itertools import combinations
 def find_params(user_message):
     global params
     global many
-    print("currently params are", params)
     current_sentence = interpreter.parse(user_message)
+    
+    reference_set = set(alternatives_dict.keys())
+    for entity in current_sentence["entities"]:
+        false_list = []
+        split_list = []
+        combination_list = []
+        output = []
+        check_set = set()
+        if entity["entity"] == "subtopic":
+            if entity["value"] not in alternatives_dict.keys():
+                false_list.append(entity["value"])
+                for false in false_list:
+                    for string in false.split():
+                        split_list.append(string)
+                    output = sum([list(map(list, combinations(split_list, i))) for i in range(len(split_list) + 1)], [])  
+                    for item in output:
+                        check_set.add(" ".join(item))
+                        check_set.add(" ".join(item[::-1]))
+                    intersection = list(check_set.intersection(reference_set))
+                    if len(intersection) > 0:
+                        entity["value"] = alternatives_dict[max(intersection, key=len)]
+                    else:
+                        current_sentence["entities"].remove(entity)      
     
     # if the number of entities in the given message is zero, that means the user is asking info only on 
     # the intent in general. thus we should empty the global parameters list to avoid unnecessary slot filling
