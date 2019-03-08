@@ -159,7 +159,7 @@ alternatives_dict = {'-ing': 'gerund','-ing form': 'present participle','0 condi
 # initialize global variables for slot filling
 params = {}
 stored_intent = ""
-many = false
+many = False
 
 
 # given a grammatically corrected user input message, find it's intent
