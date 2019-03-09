@@ -349,22 +349,24 @@ def generate_response(intent, params):
         return random_response, params
 
 def respond(user_message):
-    intent = intent_classifier(user_message)
+    intent = intent_classifier(user_message.lower())
     global stored_intent
     global params
     # if there is a change in the intent, empty the params dictionary, and assign the new intent to the stored one
     if stored_intent != intent:
         stored_intent = intent
         params = {}
-        params = find_params(user_message)
+        params = find_params(user_message.lower())
 
     # if there is no change in intent, we have to check if the all entities are emptied. If so, the user is talking 
     # only about the intent, but has no interest in any entities.
     else:
-        if len(find_params(user_message)) == 0:
+        if len(find_params(user_message.lower())) == 0:
             params = {}
         else:
-            params = find_params(user_message)	
+            params = find_params(user_message.lower())	
+            
+    print("intent : " + intent + " params: " , params)
 
     response_grammar = res_grammar(user_message, response_dict )
     response_general = generate_response(intent, params)[0].replace("\xa0", " ")
@@ -386,7 +388,8 @@ def handle_command(slack_api, command, channel):
 	EXAMPLE_COMMAND = 'do'
 	
 	parsed = interpreter.parse(command)
-	response_generated = respond(command.lower())
+    print(parsed)
+    response_generated = respond(command)
     
 	if len(response_generated) is not 0:
 		slack_api.rtm_send_message(channel, response_generated)
