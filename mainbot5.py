@@ -37,7 +37,7 @@ topic_list = ['noun','nouns','pronoun','pronouns','adjective','adjectives','adve
 # as the intent to the user message "hotel in the east", the word "hotel" is tagged as "subtopic", which is an
 # entity only used with the "grammar" intent)
 intent_entity_map = {"grammar": ["subtopic", "function"], "hotel_search": ["area", "price"], \
-                     "greet" : [], "affirm" : [], "rest" : [], "goodbye" : [], "reject" : []}
+                     "greet" : [], "affirm" : [], "rest" : [], "goodbye" : [], "reject" : [], "sport" : []}
 
 # for each intent, there is a number of template responses, some of which include a placeholder
 response_dict = {"greet" : ["Hi, ", "What's up, ", "Hello there! ", "Hey, " ], "goodbye" : ["Goodbye :(", "Hope to see you again soon"],\
