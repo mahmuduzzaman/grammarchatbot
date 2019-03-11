@@ -305,8 +305,13 @@ def generate_response(intent, params):
             return message, params
         # also, sometimes the interpreter understands that the user expects an example or a definition, but cannot
         # classify a topic or a subtopic.
-        elif ("subtopic" not in params.keys()):
-            message = "I see that you need "+params["function"]+ \
+        elif ("subtopic" not in params.keys() and "topic" not in params.keys()):
+            addText = ""
+            if ("function" in params.keys()):
+                addText = params["function"]
+            else:
+                addText = ""
+            message = "I see that you need "+addText+ \
             " for something, but i cannot understand what exactly that is. Can you specify the topic again?"
             return message, params
             
