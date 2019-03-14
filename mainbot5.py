@@ -22,7 +22,51 @@ trainer = Trainer(config)
 interpreter = trainer.train(training_data)
 
 # create dictionaries and lists for later use
-
+grammar_subtopic_map_topic = {"noun":"noun", "gendered nouns":"noun", "singular nouns":"noun" , "plural nouns": "noun",
+                              "countable nouns":"noun", "uncountable nouns":"noun", "possessive nouns":"noun", "pronoun":"noun",
+                              "definite pronouns":"noun", "indefinite pronouns":"noun", "compound pronouns":"noun", "possessive pronouns":"noun",
+                              "adjective":"adjective", "placing adjectives":"adjective", "order of adjectives":"adjective", "adjective equality":"adjective",
+                              "comparative adjectives":"adjective", "superlative adjectives":"adjective",  "adjective comparison":"adjective", "adverb":"adverb",
+                              "adverbs of place":"adverb", "adverbs of time":"adverb", "adverbs of manner":"adverb", "adverbs of degree":"adverb", "adverbs of certainty":"adverb", "relative adverbs":"adverb",
+                              "adverbs from adjectives":"adverb","comparative adverbs":"adverb", "superlative adverbs":"adverb","determiner":"determiner",
+"definite article":"determiner",
+"demonstrative":"determiner",
+"distributive":"determiner",
+"difference words":"determiner",
+"indefinite article":"determiner",
+"numbers":"determiner",
+"pre-determiners":"determiner",
+"quantifier":"determiner",
+"few":"determiner",
+"little":"determiner",
+"many":"determiner",
+"some":"determiner",
+"possessive determiner":"determiner","relative clause":"relative clause", "sentence formation":"relative clause", 
+"verb":"verb",
+"infinitive":"verb",
+"passive infinitive":"verb",
+"passive voice":"verb",
+"present simple":"verb",
+"present continuous":"verb",
+"present perfect":"verb",
+"present perfect continuous":"verb",
+"present participle":"verb",
+"past simple":"verb",
+"past continuous":"verb",
+"past perfect":"verb",
+"past perfect continuous":"verb",
+"future simple":"verb",
+"future perfect continuous":"verb",
+"future perfect":"verb",
+"future continuous":"verb",
+"zero conditional":"verb",
+"type 1 conditional":"verb",
+"type 2 conditional":"verb",
+"type 3 conditional":"verb",
+"contraction":"verb",
+"mixed conditional":"verb",
+"gerund":"verb",
+"regularity":"verb"}
 # the list of intents used 
 intents_list = ["greet", "goodbye", "hotel_search", "grammar", "affirm", "rest", "reject"]
 
@@ -36,8 +80,11 @@ topic_list = ['noun','nouns','pronoun','pronouns','adjective','adjectives','adve
 # belonging to intents that are not associated with a given user message (e.g. although "hotel_search" is assigned
 # as the intent to the user message "hotel in the east", the word "hotel" is tagged as "subtopic", which is an
 # entity only used with the "grammar" intent)
-intent_entity_map = {"grammar": ["subtopic", "function"], "hotel_search": ["area", "price"], \
+intent_entity_map = {"grammar": ["subtopic", "function","topic"], "hotel_search": ["area", "price"], \
                      "greet" : [], "affirm" : [], "rest" : [], "goodbye" : [], "reject" : [], "sport" : []}
+
+# a dictionary mapping sub topic with topic for grammar intent
+
 
 # for each intent, there is a number of template responses, some of which include a placeholder
 response_dict = {"greet" : ["Hi, ", "What's up, ", "Hello there! ", "Hey, " ], "goodbye" : ["Goodbye :(", "Hope to see you again soon"],\
@@ -174,6 +221,7 @@ from itertools import combinations
 def find_params(user_message):
     global params
     global many
+    print("currently params are", params)
     current_sentence = interpreter.parse(user_message)
     
     reference_set = set(alternatives_dict.keys())
@@ -198,6 +246,8 @@ def find_params(user_message):
                         entity["value"] = alternatives_dict[max(intersection, key=len)]
                     else:
                         current_sentence["entities"].remove(entity)      
+            elif entity["value"] not in grammar_subtopic_map_topic.keys():
+                entity["value"] = alternatives_dict[entity["value"]]
     
     # if the number of entities in the given message is zero, that means the user is asking info only on 
     # the intent in general. thus we should empty the global parameters list to avoid unnecessary slot filling
@@ -212,24 +262,45 @@ def find_params(user_message):
                 if entity["value"] in topic_list:
                     maintopics.append(entity["value"])
                 elif entity["value"] in example_list or entity["value"] in description_list:
-                    params[entity['entity']] = entity['value']
+                    parameter_entry(entity['entity'], entity['value'], current_sentence)
                 else:
                     subtopics.append(entity["value"])
         if len(subtopics) > 1 or len(maintopics) > 1:
             many = True
             for entity in current_sentence["entities"]:
-                params[entity['entity']] = entity['value']
+                parameter_entry(entity['entity'], entity['value'], current_sentence)
         elif len(subtopics) == 1:
             many = False
             for entity in current_sentence["entities"]:
                 if entity["value"] not in topic_list:
-                    params[entity['entity']] = entity['value']
+                    parameter_entry(entity['entity'], entity['value'], current_sentence)
         else:
             many = False
             for entity in current_sentence["entities"]:
-                params[entity['entity']] = entity['value']
+                parameter_entry(entity['entity'], entity['value'], current_sentence)
                 
     return params
+
+def parameter_entry(paraName, paraValue, current_sentence):
+    if(current_sentence["intent"]["name"]=="grammar"):
+        if(paraName=="topic"):
+            if("topic" in params.keys()):               
+                #check with earlier topic
+                if(params["topic"]!=paraValue):
+                    params[paraName] = paraValue
+                    params.pop('subtopic', None)
+            else:
+                 params[paraName] = paraValue
+                 params.pop('subtopic', None)
+        elif (paraName=="subtopic"):
+            #get the topic value
+            params["topic"] = grammar_subtopic_map_topic[paraValue]
+            params[paraName] = paraValue   
+        else:
+            params[paraName] = paraValue                    
+    else:
+        params[paraName] = paraValue
+    
 
 def find_query(params, intent):
     database = database_dict[intent]
@@ -366,10 +437,11 @@ def respond(user_message):
     # if there is no change in intent, we have to check if the all entities are emptied. If so, the user is talking 
     # only about the intent, but has no interest in any entities.
     else:
-        if len(find_params(user_message.lower())) == 0:
+        valpara = find_params(user_message.lower())
+        if len(valpara) == 0:
             params = {}
         else:
-            params = find_params(user_message.lower())	
+            params = valpara	
             
     print("intent : " + intent + " params: " , params)
 
