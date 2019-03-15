@@ -108,7 +108,7 @@ database_dict = { "grammar" : "grammar_final.db" , "hotel_search" : "hotels.db",
 query_dict = {"grammar" : "select text FROM grammar_db_v6", "hotel_search" : "select name FROM hotels"}
 
 # lists including different version of asking for a 'description' and 'example', respectively
-description_list = ["description", "definition", "define", "what is", "use", "describe", "rules", "form", "to use"]
+description_list = ["description", "definition", "define", "what is", "use", "describe", "rules", "form", "to use", "know"]
 example_list = ["example", "examples", "exemplify", "sentence with", "sentence"]
 
 # a dictionary to map all the alternative values of subtopics to a single value that is used in the database
