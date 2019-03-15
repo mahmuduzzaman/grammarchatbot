@@ -109,7 +109,7 @@ query_dict = {"grammar" : "select text FROM grammar_db_v6", "hotel_search" : "se
 
 # lists including different version of asking for a 'description' and 'example', respectively
 description_list = ["description", "definition", "define", "what is", "use", "describe", "rules", "form", "to use"]
-example_list = ["example", "examples", "exemplify", "sentence with"]
+example_list = ["example", "examples", "exemplify", "sentence with", "sentence"]
 
 # a dictionary to map all the alternative values of subtopics to a single value that is used in the database
 alternatives_dict = {'-ing': 'gerund','-ing form': 'present participle','0 conditional': 'zero conditional',\
