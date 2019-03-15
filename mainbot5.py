@@ -366,6 +366,11 @@ def generate_response(intent, params):
                 params["subtopic"] = alternatives_dict[params["subtopic"]]
             else:
                 del params["subtopic"]
+	if "topic" in params.keys():
+            if params["topic"] in alternatives_dict.keys(): # because sometimes untrained words are assigned to entities
+                params["topic"] = alternatives_dict[params["topic"]]
+            else:
+                del params["topic"]
         
         # then, check whether there are any entities. if not, that means either the user message could
         # not be classified into any subtopic or function group, or the user asked about grammar in general.
