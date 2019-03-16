@@ -14,6 +14,7 @@ from grammar_response import res_grammar
 
 # Rasa NLU codes
 from rasa_nlu.training_data import load_data
+
 training_data = load_data("grammar_based_data5.json") 
 from rasa_nlu.config import RasaNLUModelConfig
 from rasa_nlu.model import Trainer 
@@ -254,7 +255,7 @@ def find_params(user_message):
     if len(current_sentence['entities']) == 0:
         params = {}
     # slot filling!!!!!!!!!
-    else:
+    else:        
         maintopics = []
         subtopics = []
         for entity in current_sentence['entities']:
@@ -366,7 +367,7 @@ def generate_response(intent, params):
                 params["subtopic"] = alternatives_dict[params["subtopic"]]
             else:
                 del params["subtopic"]
-	if "topic" in params.keys():
+        if "topic" in params.keys():
             if params["topic"] in alternatives_dict.keys(): # because sometimes untrained words are assigned to entities
                 params["topic"] = alternatives_dict[params["topic"]]
             else:
@@ -454,30 +455,30 @@ def respond(user_message):
     response_general = generate_response(intent, params)[0].replace("\xa0", " ")
     
     response = response_grammar + response_general
-    
-        
+            
     return response
 
 # Env Tokens
 
 os.environ['BOTNAME'] = 'bot'
+
 def handle_command(slack_api, command, channel):
-	"""
+    """
 	Recieves commands directed for the bot, if they are valid perform action 
 	else resends clarification
-	"""
-	print( 'Command Text is : ' + command)
-	EXAMPLE_COMMAND = 'do'
+    """
+    print( 'Command Text is : ' + command)
+    EXAMPLE_COMMAND = 'do'
 	
-	parsed = interpreter.parse(command)
+    parsed = interpreter.parse(command)
     print(parsed)
     response_generated = respond(command)
     
-	if len(response_generated) is not 0:
-		slack_api.rtm_send_message(channel, response_generated)
-	else:
-		print ('Invalid Command: Not Understood')
-		slack_api.rtm_send_message(channel, 'Invalid Command: Not Understood')
+    if len(response_generated) is not 0:
+	    slack_api.rtm_send_message(channel, response_generated)
+    else:
+	    print ('Invalid Command: Not Understood')
+	    slack_api.rtm_send_message(channel, 'Invalid Command: Not Understood')
 
 def main():
 	"""
