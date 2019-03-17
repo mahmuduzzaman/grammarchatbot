@@ -15,7 +15,7 @@ from grammar_response import res_grammar
 # Rasa NLU codes
 from rasa_nlu.training_data import load_data
 
-training_data = load_data("grammar_based_data5.json") 
+training_data = load_data("grammar_based_data6.json") 
 from rasa_nlu.config import RasaNLUModelConfig
 from rasa_nlu.model import Trainer 
 config = RasaNLUModelConfig(configuration_values= {'pipeline': 'spacy_sklearn'}) 
