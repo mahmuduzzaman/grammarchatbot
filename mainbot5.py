@@ -24,8 +24,8 @@ interpreter = trainer.train(training_data)
 
 # create dictionaries and lists for later use
 grammar_subtopic_map_topic = {"noun":"noun", "gendered nouns":"noun", "singular nouns":"noun" , "plural nouns": "noun",
-                              "countable nouns":"noun", "uncountable nouns":"noun", "possessive nouns":"noun", "pronoun":"noun",
-                              "definite pronouns":"noun", "indefinite pronouns":"noun", "compound pronouns":"noun", "possessive pronouns":"noun",
+                              "countable nouns":"noun", "uncountable nouns":"noun", "possessive nouns":"pronoun", "pronoun":"pronoun",
+                              "definite pronouns":"pronoun", "indefinite pronouns":"pronoun", "compound pronouns":"pronoun", "possessive pronouns":"pronoun",
                               "adjective":"adjective", "placing adjectives":"adjective", "order of adjectives":"adjective", "adjective equality":"adjective",
                               "comparative adjectives":"adjective", "superlative adjectives":"adjective",  "adjective comparison":"adjective", "adverb":"adverb",
                               "adverbs of place":"adverb", "adverbs of time":"adverb", "adverbs of manner":"adverb", "adverbs of degree":"adverb", "adverbs of certainty":"adverb", "relative adverbs":"adverb",
